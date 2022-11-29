@@ -1,0 +1,32 @@
+.headerNav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+}
+.logoNav {
+    max-width: 100%;
+    width: 200px;
+}
+.itemOfNav {
+    display: flex;
+    align-items: baseline;
+    text-decoration: none;
+    margin-right: 0.5rem;
+    gap: 5px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+.itemOfNav p:hover {
+    text-decoration: underline;
+}
+.main-nav-item {
+    text-decoration: none;
+    margin-right: 0.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.main-nav-item:hover {
+    text-decoration: underline;
+}

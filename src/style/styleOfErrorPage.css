@@ -1,0 +1,24 @@
+.error {
+    background-color: #12002b;
+    height: 435px;
+    padding-top: 2px;
+    color: white;
+}
+.errorTitle {
+    font-size: 70px;
+}
+.link {
+    color: white;
+    font-weight: none;
+    font-size: 22px;
+}
+.link p {
+    margin-top: 120px;
+}
+.link :hover {
+    color: blue;
+}
+.errorText {
+    font-size: 30px;
+    font-weight: 500;
+}
