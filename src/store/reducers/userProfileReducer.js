@@ -2,8 +2,6 @@ import {USER_PROFILE} from '../types'
 
 const initialState= {
     userProfileInfo : [],
-    // loading:true,
-    
 }
 
 const userProfileReducer = (state=initialState, action)=>{
@@ -12,7 +10,6 @@ const userProfileReducer = (state=initialState, action)=>{
             return {
                 ...state,
                 userProfileInfo : action.payload,
-                // loading:false
             }
            
     

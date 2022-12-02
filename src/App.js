@@ -6,12 +6,12 @@ import LogInPage from './pages/LogInPage'
 import ProfilePage from './pages/ProfilePage'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ErrorPage from "./pages/ErrorPage";
-import LoadingPage from "./pages/LoadingPage";
 import TransactionPage from "./pages/TransactionPage";
+import {useSelector} from 'react-redux'
 
 
 function App() {
-
+    let isLogging = useSelector((state) => state?.userLoginReducer?.isLogging);
     
     return (
         <BrowserRouter>
@@ -20,9 +20,11 @@ function App() {
                 <Routes>
                     <Route path="/" element={<HomePage />} />
                     <Route path="/sign-in" element={<LogInPage />} />
+                    {isLogging ?
+                    <>
                     <Route path="/profile" element={<ProfilePage />} />
-                    <Route path="/loading" element={<LoadingPage />} />
-                    <Route path="/profile/transaction" element={<TransactionPage />} />
+                    <Route path="/profile/transaction" element={<TransactionPage />} /> </>: null
+                }
                     <Route path="*" element={<ErrorPage />} />
                 </Routes>
                 <Footer />

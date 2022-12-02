@@ -7,7 +7,7 @@ import { getProfileInfos } from "../store/actions/userProfileAction";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 
-// import LoadingPage from "./LoadingPage";
+
 
 const LogInPage = () => {
     const dispatch = useDispatch();
@@ -44,6 +44,8 @@ const LogInPage = () => {
             setErrorMessage(errorMessageRedux);
         }
 
+       
+
         if (userToken.length) {
             dispatch(getProfileInfos(userToken));
         }
@@ -73,7 +75,7 @@ const LogInPage = () => {
 
         handleConnect();
     };
-
+   
     return (
         <main
             className="bg-dark"
